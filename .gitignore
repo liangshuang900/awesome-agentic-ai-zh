@@ -16,3 +16,10 @@ _build/
 node_modules/
 .ai/
 __pycache__/
+
+# Phase 5 build artifacts (mdBook + PDF)
+book/dist/
+book/src/
+dist/
+mermaid.min.js
+mermaid-init.js

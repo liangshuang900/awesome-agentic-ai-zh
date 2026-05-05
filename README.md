@@ -11,7 +11,7 @@
 <p><em>結構化 7 階段學習路徑，不是平鋪 awesome list；每階段都有必跑 demo、必修閱讀、精選 project</em></p>
 
 [![License](https://img.shields.io/badge/license-MIT-blue?style=flat)](LICENSE)
-[![Status](https://img.shields.io/badge/status-Phase%204%20complete%20%C2%B7%20134%20projects-success?style=flat)](#-現況phase-4-完成)
+[![Status](https://img.shields.io/badge/status-Phase%205%20在進行中%20%C2%B7%20134%20projects-success?style=flat)](#-現況phase-5-進行中)
 ![GitHub stars](https://img.shields.io/github/stars/WenyuChiou/awesome-agentic-ai-zh?style=flat&logo=github)
 ![GitHub forks](https://img.shields.io/github/forks/WenyuChiou/awesome-agentic-ai-zh?style=flat&logo=github)
 [![Lang](https://img.shields.io/badge/語言-繁體中文-red?style=flat)](README.md)
@@ -40,7 +40,7 @@
 - [🗺️ 7 階段學習地圖](#️-7-階段學習地圖)
 - [💡 如何學習](#-如何學習)
 - [📚 相關資源](#-相關資源)
-- [🚧 Phase 1 現況](#-phase-1-現況)
+- [📍 現況：Phase 5 進行中](#-現況phase-5-進行中)
 - [🤝 如何貢獻](#-如何貢獻)
 - [🙏 致謝](#-致謝)
 - [🎓 引用](#-引用)
@@ -183,20 +183,19 @@ flowchart TD
 
 ---
 
-## 📍 現況：Phase 4 完成
+## 📍 現況：Phase 5 進行中
 
-**Phase 1（已完成）** — 7 階段骨架 + anchor curation
+**Phase 1-4（已完成）** — 骨架 + curation depth + visual polish（134 個 project，3 個 Mermaid 圖、跨 stage [walkthrough](walkthroughs/build-first-agent-in-7-steps.md)、[style guide](resources/style-guide.md)、[維護腳本](scripts/)、`.github/` 模板）
 
-**Phase 2（已完成）** — Polish & Fill（[`resources/style-guide.md`](resources/style-guide.md)、`.github/` 模板、Hello-X 格式統一 + 擴充、branches back-nav）
+**Phase 5（進行中）** — Distribution：
+- [x] [PDF build script](scripts/build-pdf.sh)（pandoc-based）
+- [x] [mdBook setup](book.toml) + [build script](scripts/build-mdbook.sh)
+- [x] [GitHub Pages auto-deploy workflow](.github/workflows/deploy-book.yml)
+- [ ] 啟用 GitHub Pages（需在 repo Settings 切換為 GitHub Actions source）
+- [ ] 第一次 PDF release（手動跑 `build-pdf.sh` 後上傳 GitHub Release）
 
-**Phase 3（已完成）** — Curation depth（Stage 0 擴充、Stage 5.4 marketplace、Multi-Agent for Research、跨 stage [walkthrough](walkthroughs/build-first-agent-in-7-steps.md)、維護腳本 [`scripts/`](scripts/)）
-
-**Phase 4（已完成）** — Visual polish + 補齊 curation：
-- [x] Stage 5 stack diagram → Mermaid（zh + en）
-- [x] README hero diagram（7-stage flow + 4 branches）+ branch decision tree
-- [x] 補到 **134 個 project**（落在 130-160 target）
-
-**Phase 5（規劃中）** — Distribution：PDF / GitBook 版本
+📖 **網站版（部署後）**：https://wenyuchiou.github.io/awesome-agentic-ai-zh/
+📄 **PDF 版（部署後）**：見 [Releases](https://github.com/WenyuChiou/awesome-agentic-ai-zh/releases)
 
 **Phase 6（持續中）** — Community + maintenance：CI link-rot 檢查、貢獻者 ladder、推廣
 
