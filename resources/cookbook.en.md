@@ -412,7 +412,7 @@ print(answer.citations)
 
 ### Further Reading
 
-- Catalog §1 [`mcp-skills-catalog.en.md` §1 Notes / Knowledge Bases](mcp-skills-catalog.en.md#1-notes--knowledge-bases)
+- Catalog §1 [`mcp-skills-catalog.en.md` §1 Notes / Knowledge Base](mcp-skills-catalog.en.md#1-notes--knowledge-base)
 - Complete research workspace: Integrate NotebookLM + Zotero + Obsidian using [`WenyuChiou/research-hub`](https://github.com/WenyuChiou/research-hub).
 
 ---

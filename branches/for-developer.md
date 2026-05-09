@@ -87,9 +87,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: { fetch-depth: 0 }
+        with:
+          fetch-depth: 0
       - name: Run Claude review
-        env: { ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }} }
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           # 用 anthropics/claude-code-action 或自寫 script
           # 抓 git diff、跑 prompt、結果 post 回 PR
@@ -102,7 +104,7 @@ jobs:
 |---|---|
 | 讓 AI 直接 push 到 main | 永遠 PR → review → merge |
 | Blind accept 大規模 refactor diff | 拆成 < 50 LOC 改動，逐個 review |
-| 把 .env / API key 丟給 AI 看 | 用 `.aiignore` / `.cursorignore` 排除 secrets |
+| 把 .env / API key 丟給 AI 看 | 用工具對應的排除機制：Cursor `.cursorignore` / Aider `.aiderignore` / Claude Code 用 `.claude/settings.json` 的 `permissions.deny` |
 | 讓 AI 在 production code 自由跑 shell | sandbox 限制、permission whitelist |
 | 用 AI 生 test 後不檢查 assertion | 跑覆蓋率 + 故意改一個 bug 看 test 抓不抓得到 |
 | 跨多個 commit 才發現方向錯 | **plan-first** 模式：先 review plan 再寫 code |

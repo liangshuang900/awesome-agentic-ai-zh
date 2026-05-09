@@ -88,9 +88,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-        with: { fetch-depth: 0 }
+        with:
+          fetch-depth: 0
       - name: Run Claude review
-        env: { ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }} }
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           # Use anthropics/claude-code-action or your own script
           # Get git diff, run prompt, post results back to PR
@@ -103,7 +105,7 @@ Reference: official [`anthropics/claude-code-action`](https://github.com/anthrop
 |---|---|
 | Let AI push directly to main | Always go through PR → review → merge |
 | Blind-accept large refactor diffs | Break into < 50 LOC chunks, review each |
-| Hand `.env` / API keys to the AI | Use `.aiignore` / `.cursorignore` to exclude secrets |
+| Hand `.env` / API keys to the AI | Use your tool's exclusion mechanism — Cursor `.cursorignore` / Aider `.aiderignore` / Claude Code `permissions.deny` in `.claude/settings.json` |
 | Let AI run shell freely against production code | Sandbox + permission whitelist |
 | Take AI-generated tests at face value | Run coverage + intentionally break a unit to see if tests catch it |
 | Discover wrong direction after many commits | **Plan-first** mode: review the plan before any coding |
