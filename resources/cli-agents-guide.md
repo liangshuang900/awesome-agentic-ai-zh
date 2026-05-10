@@ -119,6 +119,13 @@
 - 加 Aider 處理需要精準 git diff 的場景
 - 適合學者、知識工作者
 
+### Setup D：Hermes Agent + 本機 Ollama（多平台 + 中國大陸 LLM + offline）
+- **Hermes Agent** 跑在 $5 VPS 或自己的機器上，當作多平台 agent gateway
+- **LLM endpoint** 用 Ollama（`http://localhost:11434/v1`），也可以改接 z.ai GLM / Kimi 等 provider
+- **聊天入口** 用 Telegram / Slack / Discord；Hermes 負責把平台訊息轉進 agent workflow
+- **完全不想接 Anthropic / OpenAI** 時，這條路線適合做離線、隱私資料、低成本重複實驗
+- Step-by-step 做法看 [`resources/cookbook.md` Recipe 6](cookbook.md#6-本機-llm--cli-agent-快速-walkthrough)
+
 ---
 
 ## 從這份指南連回各 branch

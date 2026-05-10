@@ -10,6 +10,8 @@
 > - **Track A（CLI Power User）**：A2 用 [5.1（Claude Code 基础）](#51--claude-code-基础)；A3 用 [5.2（MCP）](#52--mcpmodel-context-protocol-基础) + 选择性用到 [5.3（Skills）](#53--skillsclaude-code-的行为层) 跟 [5.4（Plugins）](#54--plugins-与-marketplaces)（A3 的 动手练习 CLI-12 会教把 CLAUDE.md 跟 commands 打包成 plugin）。读的角度是「**怎么用 Claude Code 把工作做好**」
 > - **Track B（Agent Builder）**：把整个 stage 当「**Claude Code 内部怎么运作**」的深度学习，从 5.1 完整走到 5.4
 
+> ⚠️ **想用本地 LLM？这个 stage 不是那条路线。** Claude Code 需要 Anthropic API / OAuth，不能直接改接 Ollama 或本地 endpoint。离线、隐私资料或不想用 API 额度时，请看 [`resources/cookbook.md` Recipe 6](../resources/cookbook.zh-Hans.md#6-本地-llm--cli-agent-快速-walkthrough)，用 OpenCode / goose / Aider / Hermes 这类支持 BYO LLM 的 CLI agent。
+
 ## Stack 一览
 
 由上往下，每一层都建立在底下那一层上：

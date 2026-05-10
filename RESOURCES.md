@@ -8,7 +8,7 @@
 
 > 💡 **不懂某個詞**（LLM、agent、RAG、token、向量資料庫⋯）→ [`resources/glossary.md`](resources/glossary.md)（用語小辭典，30 多個詞每個 30-80 字解釋）
 >
-> 🍳 **想動手做但不知怎麼開始**（寫 Skill / 寫 MCP server / 接 Word / 接 NotebookLM / 接 Zotero）→ [`resources/cookbook.md`](resources/cookbook.md)（5 個 step-by-step recipe，每個 30-50 分鐘做完）
+> 🍳 **想動手做但不知怎麼開始**（寫 Skill / 寫 MCP server / 接 Word / 接 NotebookLM / 接 Zotero / 接本機 LLM）→ [`resources/cookbook.md`](resources/cookbook.md)（6 個 step-by-step recipe，每個 30-50 分鐘做完）
 
 ---
 

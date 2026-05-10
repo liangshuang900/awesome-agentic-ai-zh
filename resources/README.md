@@ -12,7 +12,7 @@
 | [`cli-agents-guide.md`](cli-agents-guide.md) | **7 個 CLI agent 比較** | 第一次選 CLI agent（Claude Code / Codex / OpenCode / Gemini CLI / goose / Aider / Hermes Agent）不知道挑哪個 | ~134 |
 | [`mcp-skills-catalog.md`](mcp-skills-catalog.md) | **62 個整合 catalog** | 想把 Claude Code 接 Notion / Obsidian / Excel / Postgres / Slack / 等等實際工具 | ~775 |
 | [`schema-design-cheatsheet.md`](schema-design-cheatsheet.md) | **function schema 設計 5 規則 + 5 anti-pattern** | 寫 tool schema / MCP server schema / function calling，發現 LLM 選錯 tool / 傳錯參數 | ~159 |
-| [`cookbook.md`](cookbook.md) | **5 個 step-by-step recipe** | 想 30-50 分鐘做出第一個 Skill / MCP server / 接 Office / 接 NotebookLM / 接 Zotero | ~510 |
+| [`cookbook.md`](cookbook.md) | **6 個 step-by-step recipe** | 想 30-50 分鐘做出第一個 Skill / MCP server / 接 Office / 接 NotebookLM / 接 Zotero / 接本機 LLM | ~620 |
 | [`style-guide.md`](style-guide.md) | **送 PR 前的格式 / 用詞規範** | 要對 repo 貢獻、寫 entry / 翻譯 | ~338 |
 
 合計 ~2100 行 reference。看起來不少，但**每份檔案讀的時機不同**——你不會一次全讀，只在對應情境查 30 秒到 5 分鐘。
@@ -35,7 +35,7 @@
 
 ### 🍳 我想動手寫第一個 Skill / MCP server / 接 Word 等
 
-→ [`cookbook.md`](cookbook.md)（5 個 step-by-step recipe）
+→ [`cookbook.md`](cookbook.md)（6 個 step-by-step recipe）
 
 ### 📐 我寫 tool schema 但 LLM 不照我意思做
 

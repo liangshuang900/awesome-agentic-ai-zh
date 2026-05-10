@@ -119,6 +119,13 @@ Three common combinations; pick one that fits:
 - Add Aider for scenarios needing precise git diff
 - Fits scholars, knowledge workers
 
+### Setup D: Hermes Agent + Local Ollama (multi-platform + mainland China LLMs + offline)
+- **Hermes Agent** runs on a low-cost VPS or your own machine as a multi-platform agent gateway
+- **LLM endpoint** can be Ollama (`http://localhost:11434/v1`), or swapped to providers such as z.ai GLM / Kimi
+- **Chat entrypoint** can be Telegram / Slack / Discord; Hermes routes platform messages into the agent workflow
+- **When you want zero Anthropic / OpenAI dependency**, this setup fits offline, privacy-sensitive, and low-cost repeat experiments
+- Step-by-step walkthrough: [`resources/cookbook.md` Recipe 6](cookbook.en.md#6-local-llm--cli-agent-quick-walkthrough)
+
 ---
 
 ## Linking Back to Branches

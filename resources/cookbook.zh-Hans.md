@@ -15,6 +15,7 @@
 3. [Word / Excel / PowerPoint workflow](#3-office-docs-workflow)
 4. [NotebookLM workflow](#4-notebooklm-workflow)
 5. [Zotero workflow](#5-zotero-workflow)
+6. [本地 LLM + CLI Agent 快速 walkthrough](#6-本地-llm--cli-agent-快速-walkthrough)
 
 ---
 
@@ -498,6 +499,116 @@ git clone https://github.com/WenyuChiou/zotero-skills ~/.claude/skills/zotero-sk
 - 完整 research workspace：[`WenyuChiou/research-hub`](https://github.com/WenyuChiou/research-hub) 集成 Zotero + Obsidian + NotebookLM
 - 学术论文写作：[`WenyuChiou/academic-writing-skills`](https://github.com/WenyuChiou/academic-writing-skills)
 - 14 个研究流程 skill 集：[`WenyuChiou/ai-research-skills`](https://github.com/WenyuChiou/ai-research-skills)
+
+---
+
+## 6. 本地 LLM + CLI Agent 快速 walkthrough
+
+> 30 分钟把 Stage 1 的本地模型接到 Stage 5 的 CLI agent：离线、隐私资料、不想用 API 额度时，可以先用这条路线做 end-to-end 验证。
+
+### 为什么
+
+Stage 1 教你用 Ollama / llama.cpp / vLLM 跑本地 LLM；Stage 5 教 Claude Code、MCP、Skills、Plugins 的 agent 生态。中间常见的误会是：**Claude Code 不是本地 LLM runner**。Claude Code 需要 Anthropic OAuth / API key，不能直接把 model endpoint 改成 Ollama 或其他本地 endpoint。
+
+如果目标是“本地 LLM + CLI agent”，选择支持 BYO LLM 的 CLI 会更直接：**OpenCode / goose / Aider / Hermes Agent** 都能接 OpenAI-compatible endpoint 或 Ollama provider。这个 recipe 用一个短流程让你先跑通 model、agent、任务三件事。
+
+### 步骤
+
+#### Step 1：Ollama + model（10 分钟）
+
+```bash
+# 安装 Ollama：https://ollama.com
+ollama pull qwen2.5:3b
+# RAM 16GB+ 可以改试：ollama pull qwen2.5:7b
+ollama serve
+```
+
+确认 OpenAI-compatible API 有响应：
+
+```bash
+curl http://localhost:11434/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -d '{"model":"qwen2.5:3b","messages":[{"role":"user","content":"用 3 句话解释 ReAct agent。"}]}'
+```
+
+#### Step 2：选一个 CLI agent 接 Ollama（10 分钟）
+
+**OpenCode**：适合想切换多 provider、又要接本地模型的人。
+
+```bash
+npm install -g opencode-ai
+opencode auth login   # provider 选 Ollama，endpoint 设 http://localhost:11434/v1
+opencode
+```
+
+**goose**：内置 Ollama provider，适合先做本地 agent 试跑。
+
+```bash
+# 安装方式看 https://block.github.io/goose
+goose configure       # provider 选 Ollama，model 设 qwen2.5:3b
+goose session start
+```
+
+**Aider**：git-native，适合在 repo 内做小型代码修改。
+
+```bash
+pip install aider-chat
+aider --model ollama/qwen2.5:3b --no-show-model-warnings
+```
+
+**Hermes Agent**：适合跑在 VPS，让 Telegram / Slack / Discord 变成 agent 入口。
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/NousResearch/hermes-agent/main/scripts/install.sh | bash
+hermes model set ollama:qwen2.5:3b
+hermes
+```
+
+#### Step 3：跑一个真实小任务（10 分钟）
+
+不要只问“hello world”。挑一个会碰到文件、摘要、表格或搜索的小任务：
+
+- 从 `~/Downloads` 找 5 个 PDF，抽出每篇 paper 的 1 句 summary 与 method。
+- 读 `data.csv` 前 3 列，输出 Markdown table 并指出列问题。
+- 搜 `~/notes/` 里 7 天内提到 `agent safety` 的段落，整理成 checklist。
+
+观察三件事：
+
+- **Speed**：本地小模型常比 API 慢 2-5 倍。
+- **Quality**：3B / 7B 模型的 reasoning、长 context、复杂代码能力通常不如 Claude。
+- **Cost**：token 成本是 `$0`，但会吃本地 RAM / VRAM 与电力。
+
+#### Step 4：跟 Claude Code 的差异（5 分钟）
+
+| 面向 | Claude Code | OpenCode + Ollama |
+|---|---|---|
+| LLM | Anthropic hosted | 本地模型 |
+| 成本 | 订阅或 per-token | `$0` token cost |
+| 速度 | 通常较稳 | 看硬件，常慢 2-5 倍 |
+| 隐私 | 内容送 Anthropic | 内容留在本地 |
+| Reasoning 上限 | Claude 4.5+ 较强 | 取决于本地模型 |
+| 适合 use case | 复杂 codebase、长 context、可靠推理 | 隐私资料、离线 demo、低成本反复试 |
+
+### 重要限制：Claude Code 不能直接用本地 LLM
+
+Claude Code 目前需要 Anthropic OAuth / API key，没有官方设置可以把模型切成 Ollama 或本地 endpoint。网上可能有 proxy 或 API shim 做实验，但这不是官方支持路径，稳定性与兼容性要自己承担。
+
+要用本地 LLM，建议把“Claude Code”和“支持 BYO LLM 的 CLI agent”分开看：Claude Code 用在需要 Claude 品质的工作；OpenCode / goose / Aider / Hermes 用在本地、离线、隐私或低成本实验。
+
+### 常见 pitfall
+
+| 问题 | 原因 | 解法 |
+|---|---|---|
+| `connection refused` | Ollama server 没在后台跑 | 开另一个 terminal 跑 `ollama serve` |
+| model output 断句怪、逻辑弱 | 3B 模型能力有限 | 改用 `qwen2.5:7b` 或 `deepseek-r1:7b` |
+| CLI agent 没改到文件 | 本地模型太弱，或 prompt 太模糊 | 缩小任务、指定文件与成功条件 |
+| memory / OOM | 模型吃掉 RAM / VRAM | 先用 `qwen2.5:3b`，再升到 7B；必要时开 swap |
+
+### 进一步
+
+- Stage 1 [Local LLM 练习](../stages/01-llm-basics.zh-Hans.md#练习-6local-llm)：Ollama / llama.cpp / vLLM 的差异
+- [`cli-agents-guide.md`](cli-agents-guide.zh-Hans.md)：7 个 CLI agent 怎么选
+- Hermes Agent README：多平台 gateway（Telegram / Discord / Slack）与 provider 设置
 
 ---
 
