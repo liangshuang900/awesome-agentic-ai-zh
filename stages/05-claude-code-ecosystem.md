@@ -230,7 +230,7 @@ Skill = **一個 markdown 檔**（`.claude/skills/<name>/SKILL.md`），告訴 C
 - `references/`、`scripts/`、`evals/` 子目錄的用途
 
 ### 必修閱讀
-1. [**Anthropic — Claude Skills 文件**](https://docs.anthropic.com/en/docs/claude-code/skills)
+1. [**Anthropic — Claude Skills 文件**](https://docs.claude.com/en/docs/claude-code/skills)
 2. **幾份範例 SKILL.md**——從 `anthropics/claude-code` 或社群 marketplace 拿
 3. [**Hello-Agents — Extra08 如何寫出好的 Skill**](https://github.com/datawhalechina/hello-agents/blob/main/Extra-Chapter/Extra08-如何写出好的Skill.md) — 中文最完整的 Skill 最佳實踐
 4. [**Hello-Agents — Extra05 Agent Skills 與 MCP 對比解讀**](https://github.com/datawhalechina/hello-agents/blob/main/Extra-Chapter/Extra05-AgentSkills解读.md) — Skills vs MCP 概念對比
@@ -315,7 +315,7 @@ Plugin
 - 發佈自己的 marketplace
 
 ### 必修閱讀
-1. [**Anthropic — Plugins 文件**](https://docs.anthropic.com/en/docs/claude-code/plugins)
+1. [**Anthropic — Plugins 文件**](https://docs.claude.com/en/docs/claude-code/plugins)
 2. **讀下面 2-3 個 marketplace 的 `plugin.json` 與 `marketplace.json`**
 
 ### 動手練習
@@ -461,7 +461,7 @@ You are a senior code reviewer. When invoked:
 
 1. [**Anthropic — Claude Code Subagents 官方文件**](https://docs.claude.com/en/docs/claude-code/sub-agents) ⭐ — `.claude/agents/` 結構、Task tool 介面、最佳實踐
 2. [**Anthropic — Building Effective Agents §orchestrator-workers**](https://www.anthropic.com/engineering/building-effective-agents) — Anthropic 自己對 orchestrator pattern 的看法（理論 + 實例）
-3. [**Anthropic Cookbook — customer_service_agent**](https://github.com/anthropics/anthropic-cookbook/tree/main/multimodal) — canonical multi-agent orchestration 範例（chapter-length 深度教材）
+3. [**Anthropic Cookbook — `customer_service_agent`**](https://github.com/anthropics/claude-cookbooks/tree/main/tool_use) — canonical multi-agent orchestration 範例（chapter-length 深度教材；notebook 在 `tool_use/customer_service_agent.ipynb`）
 
 ### 動手練習
 
@@ -477,7 +477,7 @@ You are a senior code reviewer. When invoked:
 
 | Project | ⭐ | 適合誰 | 為什麼推薦 / 備註 |
 |---|---|---|---|
-| [anthropics/anthropic-cookbook](https://github.com/anthropics/anthropic-cookbook) ⭐ 官方 | ⭐⭐⭐⭐⭐ | 5.5 完成後想看「production-grade 怎麼長」 | Anthropic 官方 chapter-length 範例。**`customer_service_agent`** = orchestrator-workers canonical；**`computer_use_demo`** = Claude 操作螢幕 multi-agent setup。Python / Jupyter notebook、MIT |
+| [anthropics/claude-cookbooks](https://github.com/anthropics/claude-cookbooks) ⭐ 官方 | ⭐⭐⭐⭐⭐ | 5.5 完成後想看「production-grade 怎麼長」 | Anthropic 官方 chapter-length 範例。**`tool_use/customer_service_agent.ipynb`** = orchestrator-workers canonical（multi-agent routing + handoff）。Python / Jupyter notebook、MIT。**註**：`computer_use_demo` 完整版在另一個 repo [`anthropic-quickstarts/computer-use-demo`](https://github.com/anthropics/claude-quickstarts/tree/main/computer-use-demo) |
 | [wshobson/agents](https://github.com/wshobson/agents) ⭐ subagent canonical | ⭐⭐⭐⭐⭐ | 寫過 1-2 個 subagent 想看真實 team 範本 | 50+ subagent definition 的 production workflow pattern collection。**看 `.claude/agents/` 目錄結構 + 命名 convention + 跨 agent handoff 寫法** |
 | [obra/superpowers](https://github.com/obra/superpowers) | ⭐⭐⭐⭐ | 想看 skill + subagent 混搭實作 | 在 Stage 5.3 已介紹。**重點看「什麼任務歸 skill、什麼歸 subagent」決策**——production 範本 |
 | [anthropics/claude-plugins-official](https://github.com/anthropics/claude-plugins-official) 官方 | ⭐⭐⭐⭐ | 看 plugin 怎麼打包 subagent | 在 Stage 5.4 已介紹。每個 plugin 內 `agents/` 子目錄是 subagent definition、看打包方式 |

@@ -127,7 +127,7 @@ Framework 把上面這 5 個 pattern 的 orchestration boilerplate（roles、han
 
 **Framework 官方 multi-agent docs**：
 - [**LangGraph — Multi-Agent Systems**](https://langchain-ai.github.io/langgraph/concepts/multi_agent/) — supervisor / swarm / hierarchical 三種架構官方教學
-- [**Anthropic Cookbook — `customer_service_agent.ipynb`**](https://github.com/anthropics/anthropic-cookbook/tree/main/tool_use) — multi-agent orchestration canonical 範例（routing + handoff）
+- [**Anthropic Cookbook — `customer_service_agent.ipynb`**](https://github.com/anthropics/claude-cookbooks/tree/main/tool_use) — multi-agent orchestration canonical 範例（routing + handoff）
 - [**Microsoft AutoGen — Examples**](https://microsoft.github.io/autogen/) — group-chat / debate / peer review pattern 完整範例
 
 > 💡 **建議框架學習流程**（5 步）：

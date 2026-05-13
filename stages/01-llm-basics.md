@@ -406,7 +406,7 @@ print(f"💡 跑這次完全沒花錢（除了你的電力）")
 
 | 分類 | Project | ⭐ | 適合誰 | 為什麼推薦 / 備註 |
 |---|---|---|---|---|
-| **官方 cookbook / 入門** | [Anthropic Cookbook](https://github.com/anthropics/anthropic-cookbook) | ⭐⭐⭐⭐⭐ | 開始用 Claude API、當參考書查 | Claude API 全功能 notebook（tool use / batch / prompt cache），★ 42k+、MIT |
+| **官方 cookbook / 入門** | [Anthropic Cookbook](https://github.com/anthropics/claude-cookbooks) | ⭐⭐⭐⭐⭐ | 開始用 Claude API、當參考書查 | Claude API 全功能 notebook（tool use / batch / prompt cache），★ 42k+、MIT |
 | | [Anthropic Courses](https://github.com/anthropics/courses) | ⭐⭐⭐⭐⭐ | 系統性從零學一遍 Claude | Anthropic 自家完整 5 門課（API 基礎 / prompt eval / real-world prompting / tool use），★ 21k+。先跑 `anthropic_api_fundamentals` |
 | | [OpenAI Cookbook](https://github.com/openai/openai-cookbook) | ⭐⭐⭐⭐⭐ | 用 OpenAI API + structured output / function calling | 跟 Anthropic Cookbook 對照、★ 73k+、MIT。比 Anthropic 大很多、用搜尋 |
 | | [Anthropic Claude API Quickstart](https://docs.anthropic.com/en/docs/get-started) | ⭐⭐⭐⭐ | 5 分鐘上手 | 官方文件、加 bookmark 用 |
