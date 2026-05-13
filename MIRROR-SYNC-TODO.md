@@ -25,11 +25,40 @@
 ### ~~🔴 HIGH — Stage 8 full translation~~ ✅ COMPLETED (commit 3f4ea8f, Gemini)
 ### ~~🔴 HIGH — Stage 7 refactor sync~~ ✅ COMPLETED (commit 75df682, Gemini)
 ### ~~🔴 HIGH — Stage 6 catch-up~~ ✅ COMPLETED (commit 06181b6, Gemini)
+### ~~🔴 HIGH — Stage 5 catch-up~~ ✅ COMPLETED (commit 8b39c75, Gemini)
+### ~~🟡 MEDIUM — Stage 4 restructure sync~~ ✅ COMPLETED (commit 488526a, Gemini)
+### ~~🟡 MEDIUM — Stage 3 restructure sync~~ ✅ COMPLETED (commit 8ae18e6, Gemini)
 ### ~~🟢 LOW — Anchor cleanup + strict mode~~ ✅ COMPLETED (commit 706d257, Codex)
+### ~~🟡 MEDIUM — Stage 1 pricing sync~~ ✅ COMPLETED (commit fe989bd, Codex)
 
-All HIGH-priority backlog items now resolved via Codex + Gemini delegations.
-Stage 6/7/8 mirrors all match canonical structure (H2 parity, no banned phrases,
-no traditional Chinese residue). Anchor validator now runs in strict mode.
+### 🟢 LOW — Stage 1 / Stage 2 mirror "extra content" trim (deferred, benign)
+
+Stage 1 mirrors: 652/651 lines vs zh-TW 443 (+209/+208 BIGGER)
+Stage 2 mirrors: 531/546 lines vs zh-TW 465 (+66/+81 BIGGER)
+
+This is the **opposite drift pattern** from Stage 3-8 (where zh-TW grew during refactors).
+Stage 1/2 mirrors were extended at an earlier point with content that doesn't exist in
+canonical. Full resync would LOSE that extra translated content; targeted trim might
+remove things readers find useful.
+
+**Decision**: defer. Anchor validator strict mode passes ('✓ All internal anchors valid').
+Mirror discrepancy is benign (extra content, not missing content). Future session can
+audit which extra content is valuable and which is stale.
+
+### Final mirror parity status (2026-05-13 end of session)
+
+| Stage | zh-TW | en | zh-Hans | Status |
+|---|---|---|---|---|
+| 01 | 443 | 652 (+209) | 651 (+208) | ⚠ benign drift (older +content) |
+| 02 | 465 | 531 (+66) | 546 (+81) | ⚠ benign drift (older +content) |
+| 03 | 500 | 499 (-1) | 500 (0) | ✅ parity |
+| 04 | 227 | 227 (0) | 227 (0) | ✅ parity |
+| 05 | 570 | 570 (0) | 570 (0) | ✅ parity |
+| 06 | 576 | 576 (0) | 576 (0) | ✅ parity |
+| 07 | 298 | 298 (0) | 298 (0) | ✅ parity |
+| 08 | 546 | 545 (-1) | 545 (-1) | ✅ parity |
+
+**6 of 8 stages now in 3-locale parity** via this session's Gemini delegations.
 
 ### 🔴 HIGH — Stage 6 catch-up
 
