@@ -243,7 +243,7 @@ A Skill = **a markdown file** (`.claude/skills/<name>/SKILL.md`) that tells Clau
 
 > 🛠️ **Writing a good SKILL.md?** There are two paths:
 > - **Path A: use Anthropic's official `skill-creator` skill to generate the skeleton** (the installation section later in 5.3.x shows this). It gives you the frontmatter and subdirectory structure automatically and is Anthropic's canonical tool.
-> - **Path B: write it yourself with the §SKILL.md design prompts below** — first read [Stage 7.5 Core Harness Engineering Principles](07.5-advanced-agentic-concepts.en.md#-core-harness-engineering-principles-multi-source-synthesis) for the concepts, then use the prompts to build the file.
+> - **Path B: write it yourself with the SKILL.md design prompts below** — first read [Stage 7.5 Core Harness Engineering Principles](07.5-advanced-agentic-concepts.en.md#-core-harness-engineering-principles-multi-source-synthesis) for the concepts, then use the prompts to build the file.
 >
 > The two paths are complementary: `skill-creator` gives you structure, while the 5-principle prompts check content quality.
 

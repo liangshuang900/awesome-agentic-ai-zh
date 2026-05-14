@@ -341,7 +341,7 @@ DO NOT:
 右側獨立框：F14 具體例子（直線箭頭）：
   💥 F14 incident (2026-05-13)
   ↓
-  📝 observed-failure-modes.md §F14
+  📝 observed-failure-modes.md F14
   ↓
   📋 multi-locale-mirror-sync.yml + check
   ↓
@@ -395,7 +395,7 @@ DO NOT:
 右侧独立框：F14 具体例子（直线箭头）：
   💥 F14 incident (2026-05-13)
   ↓
-  📝 observed-failure-modes.md §F14
+  📝 observed-failure-modes.md F14
   ↓
   📋 multi-locale-mirror-sync.yml + check
   ↓
@@ -449,7 +449,7 @@ Side caption (between or beside the loop): "Codify each incident once — don't 
 Right-side separate box: F14 concrete example (linear arrows):
   💥 F14 incident (2026-05-13)
   ↓
-  📝 observed-failure-modes.md §F14
+  📝 observed-failure-modes.md F14
   ↓
   📋 multi-locale-mirror-sync.yml + new check
   ↓
