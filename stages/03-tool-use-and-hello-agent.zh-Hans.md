@@ -12,7 +12,7 @@
 
 ## 🤖 开始前：AI / LLM / Agent — 三者怎么分？
 
-> **本节是「开场框景」（由大到小 pedagogy）**：先把学习者脑中的 mental hierarchy 建好，再进 §学习目标、§练习。这节只做**简短说明 + 对照**，深度入门读物已经是中英文圈各自的 canonical reference（见下方资源）。**不是重写 hello-agents Ch1。**
+> **本节是「开场框景」（由大到小 pedagogy）**：先把学习者脑中的 mental hierarchy 建好，再进 §学习目标、§练习。这节只做**简短说明 + 对照**，深度入门读物已经是中英文圈各自的 canonical reference（即「最公认的标准参考」、见下方资源）。**不是重写 hello-agents Ch1。**
 
 ### 一张阶层图先建立认知
 

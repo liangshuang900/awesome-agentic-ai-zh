@@ -94,6 +94,8 @@ After **Stages 0-2 (shared foundations)**, pick a track based on your goal:
 
 The two tracks are **not mutually exclusive** — most people start with A to get hands-on, then come back to B for internals (or vice versa). Stage 5 (Claude Code Ecosystem) is used by both tracks.
 
+> 📖 **Symbols used in this doc**: `🔄` = shared hub used by both tracks (Stage 5 / Stage 8); `⭐` = curriculum importance / difficulty (not GitHub stars); `★ 8k+` is the GitHub star count; `§` = a section (e.g. §Harness Engineering means "the Harness Engineering section"). Full symbol legend: [`resources/glossary.en.md`](resources/glossary.en.md).
+
 ### Shared Foundations (Stages 0-2)
 
 | Stage | Topic | Key Content | Time |

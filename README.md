@@ -99,6 +99,8 @@ cd awesome-agentic-ai-zh
 
 兩條學習路徑**不互斥**——多數人是先走 A 把 CLI 用起來，再回到 B 學內部運作；或反過來也行。Stage 5（Claude Code 生態）兩條路徑都會用到。
 
+> 📖 **本頁慣用符號**：`🔄` = 兩條路徑共用 hub（Stage 5 / Stage 8）；`⭐` = 教材重要性 / 難度（不是 GitHub 星數）；`★ 8k+` 才是 GitHub 星數；`§` = 章節（如 §Harness Engineering）。完整符號表見 [`resources/glossary.md`](resources/glossary.md#-文件慣用符號先看這個後面-stage-都會用到)。
+
 ### 共用基礎（Stage 0-2）
 
 | Stage | 主題 | 關鍵內容 | 預估時程 |
