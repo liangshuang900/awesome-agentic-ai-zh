@@ -144,7 +144,7 @@ Framework 把上面這 5 個 pattern 的 orchestration boilerplate（roles、han
 > 2. **跑 1 個 framework quickstart**（2-3 hr）— LangGraph 或 CrewAI 二選一、跑官方多 agent 教學
 > 3. **對照 Anthropic Cookbook `customer_service_agent`**（1 hr）— production-style routing + handoff 範例
 > 4. *(可選)* **深入學術側**：挑 paper 1-2 篇看（AutoGen / CAMEL / ChatDev / Generative Agents）
-> 5. *(Claude 用戶可選)* **寫一個 subagent 對照**：見 [Stage 5.5](05-claude-code-ecosystem.md#55--subagentsclaude-code-原生-multi-agent-機制-2025-新功能)、跟 framework 路線比較
+> 5. *(Claude 使用者可選)* **寫一個 subagent 對照**：見 [Stage 5.5](05-claude-code-ecosystem.md#55--subagentsclaude-code-原生-multi-agent-機制-2025-新功能)、跟 framework 路線比較
 >
 > **不必把 5 個 paper 全讀完**、挑跟你場景最近的 1-2 個。
 

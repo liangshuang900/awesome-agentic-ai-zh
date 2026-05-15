@@ -154,7 +154,7 @@
 
 ### 第 8 個核心元件深入 — Cost / Latency Optimization（2024-2026 Production 化必修）
 
-Production agent 跑久了、**cost / latency 兩條線會吃掉你大半預算與用戶體驗**。2024-2026 前沿模型都把這當 first-class API feature——**會用 = 省 50-90% cost / latency**。
+Production agent 跑久了、**cost / latency 兩條線會吃掉你大半預算與使用者體驗**。2024-2026 前沿模型都把這當 first-class API feature——**會用 = 省 50-90% cost / latency**。
 
 | 技巧 | 怎麼省 | 2026 狀態 |
 |---|---|---|

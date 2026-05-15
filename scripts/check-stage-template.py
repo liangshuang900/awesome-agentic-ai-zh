@@ -52,7 +52,11 @@ EXPECTED_PATTERNS = [
 #   - 05- Claude Code ecosystem: multi-sub-stage container (5.1-5.6),
 #     each sub-stage has its own learning goals/practice structure;
 #     template check at file level doesn't make sense.
-SKIP_STAGES = ['00-', '05-']
+#   - 07.5- advanced agentic concepts: reading-map chapter (12 concepts
+#     skeleton + reading paths + cross-vendor principles); intentionally
+#     does NOT have 動手練習 / 精選 Projects — it's a meta-章 pointing
+#     to other stages, not a hands-on stage. Has 自我檢查 only.
+SKIP_STAGES = ['00-', '05-', '07.5-']
 
 H2_RE = re.compile(r'^## (.+?)\s*$', re.MULTILINE)
 

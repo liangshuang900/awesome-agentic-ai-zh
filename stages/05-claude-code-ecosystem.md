@@ -49,7 +49,7 @@
 
 ### Claude Code 是什麼（先定位）
 
-**Claude Code = 跑在你 terminal 內的 Claude agent**——有完整 file system / shell / git / 子程序 access、可以**自主完成多步驟工作**（讀檔 → 改檔 → 跑 test → commit → 發 PR）。
+**Claude Code = 跑在你 terminal 內的 Claude agent**——有完整 file system / shell / git / subprocess access、可以**自主完成多步驟工作**（讀檔 → 改檔 → 跑 test → commit → 發 PR）。
 
 跟其他 Claude 介面差別：
 
@@ -284,7 +284,7 @@ Skill = **一個 markdown 檔**（`.claude/skills/<name>/SKILL.md`），告訴 C
 
 → **建議流程**：先 `/skill skill-creator` 拿乾淨骨架 → 用 Prompt 2 填內容 → 寫完用 Prompt 1 audit。
 
-**核心 mental model**：你發現自己「**每次都要打同樣的 prompt 教 Claude 怎麼做某件事**」→ 把它寫成 skill、下次就不用了。Claude Code 生態裡 **skill 是 power user 跟普通用戶的分水嶺**——熟練 skill 寫作的人能把 1 個小時的工作壓到 5 分鐘。
+**核心 mental model**：你發現自己「**每次都要打同樣的 prompt 教 Claude 怎麼做某件事**」→ 把它寫成 skill、下次就不用了。Claude Code 生態裡 **skill 是 power user 跟一般使用者的分水嶺**——熟練 skill 寫作的人能把 1 個小時的工作壓到 5 分鐘。
 
 ### Skill vs CLAUDE.md vs MCP vs Plugin vs Subagent — 一張表分清楚
 
@@ -751,7 +751,7 @@ You are a senior code reviewer. When invoked:
 |---|---|---|---|
 | [anthropics/claude-agent-sdk-python](https://github.com/anthropics/claude-agent-sdk-python) | ⭐⭐⭐⭐⭐ | 所有 Track B 學習者、想搞清楚「Claude Code 內部怎麼跑」 | **canonical Python harness、本節練習就是讀這個 repo**。後面 Stage 7 deploy 也會 import |
 | [ZhangHanDong/harness-engineering-from-cc-to-ai-coding](https://github.com/ZhangHanDong/harness-engineering-from-cc-to-ai-coding) | ⭐⭐⭐⭐ | 中文 reader 想看「為什麼 Claude Code 這樣設計」 | 中文圈最完整 CC 內部解讀（harness 概念 → CC 實作 → 跟其他 AI coding tool 對比）。**配合 SDK source 互補看**——一個告訴你「怎麼做」、一個告訴你「為什麼這麼做」 |
-| [ai-boost/awesome-harness-engineering](https://github.com/ai-boost/awesome-harness-engineering) | ⭐⭐⭐⭐ | 5.6 讀完想擴大視野 | community curation：30+ harness / eval / memory / observability / MCP project（★ 780+）。**廣度資源庫、非教程**——挑感興趣的 sub-topic 鑽進去 |
+| [ai-boost/awesome-harness-engineering](https://github.com/ai-boost/awesome-harness-engineering) | ⭐⭐⭐⭐ | 5.6 讀完想擴大視野 | community curation：30+ harness / eval / memory / observability / MCP project（★ 780+）。**廣度資源庫、非教學**——挑感興趣的 sub-topic 鑽進去 |
 | [wshobson/agents](https://github.com/wshobson/agents) | ⭐⭐⭐⭐ | 寫完 5.5 自己的 subagent 後想看 production-grade 範本 | 50+ subagent definition 的 ergonomic 設計（description / tool list / system prompt 分層）。**讀 source 比讀文件學得多**。在 5.5 已介紹、本節 cross-ref |
 
 > 💡 **本節跟 Stage 7 的差別**：本節學「Claude Code 這個 harness 怎麼跑」（具體 reference）；Stage 7 學「production harness 一般要有什麼」（抽象 pattern）。**先具體後抽象**、看完本節再進 Stage 7 會輕鬆很多。
