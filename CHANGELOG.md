@@ -15,6 +15,7 @@ Format: `YYYY-MM-DD · category · 1-line summary (commit-sha)`.
 - **outreach** · send-day copy-paste packages playbook for awesome-list submissions (`afd7a76`).
 - **content** · per-chapter improvement audit (12-agent fan-out + skeptical filter) → 5 gap-fills, all tri-locale: Stage 3 lethal-trifecta security callout + MCP router note + glossary (`f3bde60`); Stage 1 next-token / sampling mental-model box (`1bd171f`); Stage 5 Hooks (L3 control layer) subsection (`9d2897f`); Stage 7 Loop Engineering note + glossary (`eb8e64c`).
 - **catalog** · new Web Search / Retrieval category (exa-mcp + tavily-mcp) + Context7 in Dev-Collaboration; category count 15→16 (`b1718d3`).
+- **content** · improvement-audit medium batch (6 more tri-locale gap-fills): Stage 3 structured outputs / JSON-mode (`93006a8`); Stage 2 reasoning-vs-CoT + Stage 5 MCP-in-2026 (Registry / FastMCP / security) + Stage 8 accessibility-tree & Playwright-MCP (`ea0633e`); Stage 6 RAG ingest-parsing + embedding-model selection + Stage 7 OTel GenAI conventions / pass^k·τ²-bench / MAST (`2fcfc6b`).
 
 ---
 
